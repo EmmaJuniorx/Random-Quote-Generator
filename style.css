@@ -1,0 +1,127 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f0f5; /* Soft gray background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+.quote-container {
+    background-color: white; /* Clean white background for the quote box */
+    border-radius: 15px; /* Softer corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow for more pronounced lift */
+    padding: 30px; /* Increased padding for more breathing space */
+    text-align: center;
+    max-width: 500px; /* Keeps the container from getting too wide */
+    width: 90%; /* Responsive width */
+    transition: transform 0.3s ease;
+}
+
+.quote-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+h1 {
+    font-size: 28px; /* Larger heading for a bolder title */
+    color: #333; /* Darker text for better readability */
+    margin-bottom: 20px; /* More space below the title */
+}
+
+#quote {
+    font-size: 20px; /* Slightly larger font for the quote */
+    color: #555; /* Softer gray for the quote text */
+    margin-bottom: 15px;
+    font-style: italic; /* Italic style to differentiate the quote */
+    line-height: 1.5; /* Better readability */
+}
+
+#author {
+    font-size: 18px; /* Slightly larger for the author's name */
+    color: #777; /* Medium gray for the author's name */
+    margin-bottom: 20px; /* Space below the author's name */
+}
+
+#categorySelect {
+    padding: 12px; /* More padding for the dropdown */
+    border: 2px solid #4bae53; /* Green border to match the button */
+    border-radius: 5px; /* Soft rounded corners */
+    margin-bottom: 15px; /* Space below the dropdown */
+    width: 100%; /* Full width */
+    font-size: 16px; /* Slightly larger font for readability */
+    background-color: #f9f9f9; /* Light background for the dropdown */
+    transition: border-color 0.3s; /* Smooth border color change */
+}
+
+#categorySelect:focus {
+    border-color: #3c9b47; /* Darker green on focus */
+    outline: none; /* Remove default outline */
+}
+
+#fetchQuoteButton {
+    background-color: #4bae53; /* Green button */
+    color: white; /* White text for contrast */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px 20px; /* Larger padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Larger button text */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s, transform 0.2s; /* Transition for color and scale */
+}
+
+#fetchQuoteButton:hover {
+    background-color: #3c9b47; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+#fetchQuoteButton:active {
+    transform: scale(0.95); /* Slightly scale down when pressed */
+}
+
+/* Footer styles */
+.footer {
+    margin-top: 20px; /* Space above footer */
+    font-size: 14px; /* Footer font size */
+    color: #777; /* Footer text color */
+    text-align: center; /* Centered text */
+}
+
+.api-reference {
+    margin-top: 10px; /* Space above API reference */
+    font-size: 12px; /* Smaller font for reference */
+    color: #555; /* Medium gray for the reference */
+    text-align: center; /* Centered text */
+}
+
+.api-reference a {
+    color: #4bae53; /* Link color to match the button */
+    text-decoration: none; /* Remove underline */
+}
+
+.api-reference a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px; /* Smaller title on mobile */
+    }
+
+    #quote {
+        font-size: 18px; /* Smaller quote font on mobile */
+    }
+
+    #author {
+        font-size: 16px; /* Smaller author font on mobile */
+    }
+
+    #fetchQuoteButton {
+        width: 100%; /* Full-width button on mobile */
+        padding: 12px; /* Adjust padding */
+    }
+}
