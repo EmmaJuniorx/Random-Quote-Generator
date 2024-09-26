@@ -1,6 +1,6 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f0f0f5; /* Soft gray background */
+    background-color: #f0f4f8; /* Softer and lighter background */
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,117 +11,188 @@ body {
 }
 
 .quote-container {
-    background-color: white; /* Clean white background for the quote box */
-    border-radius: 15px; /* Softer corners */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow for more pronounced lift */
-    padding: 30px; /* Increased padding for more breathing space */
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 15px; /* Slightly softer corners */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12); /* Softer, smoother shadow */
+    padding: 40px;
     text-align: center;
-    max-width: 500px; /* Keeps the container from getting too wide */
+    max-width: 600px; /* Slightly wider */
     width: 90%; /* Responsive width */
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .quote-container:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
+    transform: translateY(-5px); /* More subtle hover effect */
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2); /* Softer shadow on hover */
 }
 
 h1 {
-    font-size: 28px; /* Larger heading for a bolder title */
-    color: #333; /* Darker text for better readability */
-    margin-bottom: 20px; /* More space below the title */
+    font-size: 28px; /* More refined font size */
+    color: #2c3e50; /* Richer dark color */
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 #quote {
-    font-size: 20px; /* Slightly larger font for the quote */
-    color: #555; /* Softer gray for the quote text */
-    margin-bottom: 15px;
-    font-style: italic; /* Italic style to differentiate the quote */
-    line-height: 1.5; /* Better readability */
+    font-size: 22px; /* Larger for better readability */
+    color: #34495e; /* Slightly darker gray for the quote */
+    margin-bottom: 20px;
+    font-style: italic;
+    line-height: 1.7; /* Extra spacing for readability */
+    letter-spacing: 0.5px; /* Slight spacing for elegance */
 }
 
 #author {
-    font-size: 18px; /* Slightly larger for the author's name */
-    color: #777; /* Medium gray for the author's name */
-    margin-bottom: 20px; /* Space below the author's name */
+    font-size: 18px; /* Appropriate size for readability */
+    color: #7f8c8d; /* Softer gray for contrast */
+    margin-top: 15px;
+    font-weight: 500; /* Medium weight for elegance */
 }
 
 #categorySelect {
-    padding: 12px; /* More padding for the dropdown */
-    border: 2px solid #4bae53; /* Green border to match the button */
-    border-radius: 5px; /* Soft rounded corners */
-    margin-bottom: 15px; /* Space below the dropdown */
-    width: 100%; /* Full width */
-    font-size: 16px; /* Slightly larger font for readability */
-    background-color: #f9f9f9; /* Light background for the dropdown */
-    transition: border-color 0.3s; /* Smooth border color change */
+    padding: 14px;
+    border: 1px solid #bdc3c7; /* Softer border */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 18px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+    color: #2c3e50;
 }
 
 #categorySelect:focus {
-    border-color: #3c9b47; /* Darker green on focus */
-    outline: none; /* Remove default outline */
+    border-color: #3498db; /* Blue border on focus */
+    outline: none;
 }
 
 #fetchQuoteButton {
-    background-color: #4bae53; /* Green button */
-    color: white; /* White text for contrast */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 12px 20px; /* Larger padding */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Larger button text */
-    font-weight: bold; /* Bold text */
-    transition: background-color 0.3s, transform 0.2s; /* Transition for color and scale */
+    background-color: #3498db; /* Refined blue color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 25px; /* Slightly smaller padding for balance */
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #fetchQuoteButton:hover {
-    background-color: #3c9b47; /* Darker green on hover */
-    transform: scale(1.05); /* Slightly scale up on hover */
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
 #fetchQuoteButton:active {
-    transform: scale(0.95); /* Slightly scale down when pressed */
+    transform: scale(0.98);
+}
+
+/* Customization Controls */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Adjusted gap for consistency */
+}
+
+.controls label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #2c3e50;
+}
+
+#fontSelect, #fontSizeSelect, #textColorSelect, #bgColorSelect, #bgImageInput {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#fontSelect:focus, #fontSizeSelect:focus, #textColorSelect:focus, #bgColorSelect:focus, #bgImageInput:focus {
+    border-color: #3498db; /* Unified focus color */
+}
+
+#generateImageButton {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#generateImageButton:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+#quoteCanvas {
+    display: none;
+    margin-top: 20px;
+}
+
+#downloadLink {
+    margin-top: 20px;
+    color: #3498db;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#downloadLink:hover {
+    text-decoration: underline;
 }
 
 /* Footer styles */
 .footer {
-    margin-top: 20px; /* Space above footer */
-    font-size: 14px; /* Footer font size */
-    color: #777; /* Footer text color */
-    text-align: center; /* Centered text */
+    margin-top: 30px;
+    font-size: 14px;
+    color: #7f8c8d; /* Lighter gray for footer */
+    text-align: center;
 }
 
 .api-reference {
-    margin-top: 10px; /* Space above API reference */
-    font-size: 12px; /* Smaller font for reference */
-    color: #555; /* Medium gray for the reference */
-    text-align: center; /* Centered text */
+    margin-top: 15px;
+    font-size: 13px;
+    color: #95a5a6; /* Lighter gray for API reference */
+    text-align: center;
 }
 
 .api-reference a {
-    color: #4bae53; /* Link color to match the button */
-    text-decoration: none; /* Remove underline */
+    color: #3498db;
+    text-decoration: none;
 }
 
 .api-reference a:hover {
-    text-decoration: underline; /* Underline on hover for better UX */
+    text-decoration: underline;
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 600px) {
     h1 {
-        font-size: 24px; /* Smaller title on mobile */
+        font-size: 24px; /* Adjusted for mobile */
     }
 
     #quote {
-        font-size: 18px; /* Smaller quote font on mobile */
+        font-size: 18px;
     }
 
     #author {
-        font-size: 16px; /* Smaller author font on mobile */
+        font-size: 16px;
     }
 
     #fetchQuoteButton {
-        width: 100%; /* Full-width button on mobile */
-        padding: 12px; /* Adjust padding */
+        width: 100%;
+        padding: 14px;
+    }
+
+    .controls {
+        gap: 10px;
     }
 }
