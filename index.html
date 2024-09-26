@@ -83,6 +83,33 @@
         </select>
         
         <button id="fetchQuoteButton">Generate Quote</button>
+        
+             <!-- Customization Options -->
+             <div class="controls">
+                <label for="fontSelect">Font Style:</label>
+                <select id="fontSelect">
+                    <option value="Arial">Arial</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+    
+                <label for="fontSizeSelect">Font Size:</label>
+                <input type="number" id="fontSizeSelect" value="24" min="12" max="72">
+    
+                <label for="textColorSelect">Text Color:</label>
+                <input type="color" id="textColorSelect" value="#000000">
+    
+                <label for="bgColorSelect">Background Color:</label>
+                <input type="color" id="bgColorSelect" value="#ffffff">
+    
+                <label for="bgImageInput">Background Image (optional):</label>
+                <input type="file" id="bgImageInput" accept="image/*">
+            </div>
+    
+            <button id="generateImageButton">Generate Image</button>
+            <canvas id="quoteCanvas" width="500" height="500" style="display:none;"></canvas>
+            <a id="downloadLink" style="display:none;" download="quote-image.png">Download Image</a>
 
         <div class="api-reference">
             <p>Quotes provided by <a href="https://api.api-ninjas.com/v1/quotes" target="_blank">API Ninjas</a>.</p>
